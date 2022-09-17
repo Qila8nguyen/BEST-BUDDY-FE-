@@ -1,0 +1,21 @@
+.layout {
+  position: absolute;
+  min-height: 100%;
+  min-width: 100%;
+  background-position: center !important;
+  background-repeat: no-repeat !important;
+  background-size: cover !important;
+  display: flex;
+  background-color: #faf9f5;
+}
+
+.layout-content {
+  width: 70%;
+  align-self: center;
+  margin-top: 140px;
+  padding-bottom: 50px;
+  z-index: 99 !important;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}

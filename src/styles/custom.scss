@@ -1,0 +1,55 @@
+// Hardcore styling for the site.
+// Convention: .{wrap-component_name}-custom-{children}
+
+.panel-title-custom-tabs {
+  .platform-tabs-nav {
+    &::before {
+      border: none !important;
+    }
+    .platform-tabs-nav-operations {
+      display: none;
+    }
+  }
+  .platform-tabs-top {
+    .platform-tabs-content-holder {
+      display: none;
+    }
+  }
+  .platform-tabs-tab {
+    padding: 5px 0;
+
+    .platform-tabs-tab-btn {
+      color: #848484;
+    }
+  }
+  .platform-tabs-tab-active {
+    .platform-tabs-tab-btn {
+      color: #191919;
+    }
+  }
+  .platform-tabs-tab-btn {
+    font-weight: 400px;
+  }
+}
+.custom-collapse-with-hover {
+  .platform-collapse
+    > .platform-collapse-item
+    > .platform-collapse-header:hover {
+    background-color: #fafafa;
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.08);
+    border-radius: 8px;
+    margin: 0 18px;
+    padding: 12px 6px 12px 6px;
+  }
+}
+
+.custom-table-body {
+  .platform-table-cell {
+    font-size: 14px;
+    padding: 10px;
+  }
+
+  .platform-table {
+    padding: 20px;
+  }
+}

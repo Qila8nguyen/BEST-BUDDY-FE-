@@ -1,0 +1,59 @@
+@import './platform.scss';
+@import './custom.scss';
+
+.h-100 { height: 100%; }
+
+.w-100 { width: 100%; }
+
+.w-100px { width: 100px; }
+.w-150px { width: 150px; }
+.w-200px { width: 200px; }
+
+.no-padding { padding:0px }
+.no-margin { margin:0px }
+
+.fw-400 { font-weight: 400; }
+.fw-500 { font-weight: 500; }
+.fw-600 { font-weight: 600; }
+
+.p-t-15 { padding-top: 15px; }
+.p-t-20 { padding-top: 20px; }
+
+.p-b-15 { padding-bottom: 15px; }
+.p-b-20 { padding-bottom: 20px; }
+
+.m-t-15 { margin-top: 15px; }
+.m-t-20 { margin-top: 20px; }
+
+.lg-btn {
+  height: 48px;
+  padding: 12px, 20px, 12px, 20px;
+  min-width: 76px;
+}
+
+.sm-tag {
+  padding: 2px 5px;
+  min-width: 0;
+  min-height: 0;
+}
+
+.center {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.5);
+  z-index: 1;
+}
+
+.overlayActive {
+  z-index: 1;
+  position: relative;
+}

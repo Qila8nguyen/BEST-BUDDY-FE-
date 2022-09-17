@@ -1,0 +1,12 @@
+@import './variables.scss';
+
+:export {
+  primaryColor: $primary-color;
+  hoverColor: $hover-color;
+  activeColor: $active-color;
+  darkSiderColor: $dark-sider-color;
+  lightSiderColor: $light-sider-color;
+  errorColor: $error-color;
+  warningColor: $warning-color;
+  successColor: $success-color;
+}

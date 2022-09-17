@@ -1,0 +1,44 @@
+{
+  "compilerOptions": {
+    "sourceMap": true,
+    "outDir": "dist",
+    "strict": true,
+    "lib": [
+      "esnext"
+    ],
+    "baseUrl": "./src",
+    "paths": {
+      "src/*": [
+        "./*"
+      ],
+      "components/*": [
+        "./components/*"
+      ],
+      "config/*": [
+        "./config/*"
+      ],
+      "hooks/*": [
+        "./hooks/*"
+      ],
+      "libs/*": [
+        "./libs/*"
+      ],
+      "pages/*": [
+        "./pages/*"
+      ],
+      "utils/*": [
+        "./utils/*"
+      ],
+      "redux/*": [
+        "./redux/*"
+      ],
+      "public/*": [
+        "../public/*"
+      ],
+      "emails/*": [
+        "../emails/*"
+      ]
+    },
+    "esModuleInterop": true
+  }
+}

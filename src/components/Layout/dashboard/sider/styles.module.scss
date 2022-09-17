@@ -1,0 +1,30 @@
+.sider {
+  flex: 0 0 250px !important;
+  min-width: 276px !important;
+  min-height: 700px;
+  background-color: white;
+}
+
+.logo {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 64px 24px;
+  cursor: pointer;
+}
+
+.footer {
+  position: fixed;
+  z-index: 1;
+  bottom: 0;
+  background-color: white;
+  max-width: 276px !important;
+}
+
+.content {
+  justify-content: space-between;
+  flex-direction: column;
+  display: flex;
+  max-height: 100vh;
+  position: fixed;
+}

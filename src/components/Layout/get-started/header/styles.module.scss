@@ -1,0 +1,36 @@
+.header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+  background: radial-gradient(99.62% 26674.59% at 2.5% 77.84%, #00658F 0%, #008AC4 100%);
+  z-index: 99 !important;
+  min-width: 766px;
+  height: 88px;
+  padding: 0 112px 0 112px;
+  opacity: 0.96;
+}
+
+.logo {
+  .img {
+    width: 200px;
+  }
+}
+
+.info {
+  width: 230px;
+  display: flex;
+  justify-content: space-between;
+}
+
+.touchable-text {
+  color: white;
+  cursor: pointer;
+}
+
+.container {
+  display: flex;
+  flex-direction: row;
+  align-items: flex-start;
+  justify-content: space-between;
+}

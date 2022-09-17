@@ -1,0 +1,20 @@
+.container {
+  height: 100%;
+  // font-family: 'Poppins', sans-serif;
+  display: flex;
+  flex-direction: column;
+  width: fit-content;
+  margin: auto;
+  align-items: left;
+  justify-content: center;
+  .p {
+    border-radius: 0 !important;
+    border-bottom: 1px solid rgba(0, 0, 0, 0.65) !important;
+    color: rgb(0, 0, 0);
+    width: 600px !important;
+    font-size: 20px;
+    width: 200px;
+    padding: 0 !important;
+    padding-bottom: 5px;
+  }
+}
