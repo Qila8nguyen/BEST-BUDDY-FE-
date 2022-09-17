@@ -1,3 +1,5 @@
+# Self-Mood-FE-
+
 ## Getting Started
 
 Node version: 16.x
@@ -20,4 +22,4 @@ npx prisma db seed
 yarn dev
 ```
 
-Open [http://localhost:4200](http://localhost:4200) with your browser to see the result.
+Open [http://localhost:3600](http://localhost:3600) with your browser to see the result.
