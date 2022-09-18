@@ -1,15 +1,18 @@
-export const CREATE_OR_UPDATE_NOTIFICATION_SETTING = `
-mutation CreateOrUpdateNotificationSetting($createOrUpdateNotificationSettingInput: CreateNotificationSettingInput!) {
-  createOrUpdateNotificationSetting(createOrUpdateNotificationSettingInput: $createOrUpdateNotificationSettingInput) {
-    id
-    orgId
-    createdBy
-    isDefault
-    platformInfo {
-      variant
+import { gql } from '@apollo/client'
+
+export const CREATE_NOTIFICATION = gql`
+  mutation CreateMessage($data: NotificationInputType!) {
+    createMessage(data: $data) {
+      createdAt
+      id
+      message
+      subscriptionId
+      updatedAt
+      userName
+      manifestList
     }
   }
-}`
+`
 
 export const MUTATION_REMOVE_NOTIFICATION_SETTING = `
 mutation RemoveNotificationSetting($removeNotificationSettingId: Int!, $userId: String!) {

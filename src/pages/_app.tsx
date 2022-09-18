@@ -7,27 +7,76 @@ import {
 import { AppProps } from 'next/app'
 import { Card, ConfigProvider } from 'antd'
 import 'styles/globals.scss'
-import { DashboardLayout } from '../../src/components/Layout/dashboard'
-import { createContext, useState } from 'react'
+import { DashboardLayout } from '../components/layout/dashboard'
+import { createContext, useContext, useEffect, useState } from 'react'
+import { usePushNotifications } from '../usePushNotifications'
+import axios from 'axios'
 
-const client = new ApolloClient({
+export const BackEndClient = new ApolloClient({
   cache: new InMemoryCache(),
   uri: `${process.env.NEXT_PUBLIC_APOLLO_SERVER_IP}/graphql`,
 })
 
-export const AdminOrgContext = createContext({
+export const UserContext = createContext({
   orgId: 'org2',
   userId: 'user2',
+  userName: 'phuongnghi',
 })
+
 const App = ({ Component, pageProps }: any) => {
+  const {
+    userConsent,
+    pushNotificationSupported,
+    userSubscription,
+    onClickAskUserPermission,
+    onClickSusbribeToPushNotification,
+    onClickSendSubscriptionToPushServer,
+    pushServerSubscriptionId,
+    onClickSendNotification,
+    error,
+    loading,
+  } = usePushNotifications()
+
+  useEffect(() => {
+    onClickAskUserPermission()
+    onClickSusbribeToPushNotification()
+    // onClickSendSubscriptionToPushServer()
+  }, [])
+
+  useEffect(() => {
+    if (error) {
+      onClickAskUserPermission()
+    }
+  }, [error])
+
+  useEffect(() => {
+    if ('serviceWorker' in navigator) {
+      window.addEventListener('load', function () {
+        navigator.serviceWorker.register('/sw.js').then(
+          function (registration) {
+            console.log(
+              'Service Worker registration successful with scope: ',
+              registration.scope,
+            )
+          },
+          function (err) {
+            console.log('Service Worker registration failed: ', err)
+          },
+        )
+      })
+    }
+  }, [])
+
   return (
     <ConfigProvider prefixCls="platform">
-      <ApolloProvider client={client}>
-        <AdminOrgContext.Provider value={{ orgId: 'org2', userId: 'user2' }}>
+      <ApolloProvider client={BackEndClient}>
+        <UserContext.Provider
+          value={{ orgId: 'org2', userId: 'user2', userName: 'nghi' }}
+        >
           <DashboardLayout>
             <Component {...pageProps} />
           </DashboardLayout>
-        </AdminOrgContext.Provider>
+        </UserContext.Provider>
       </ApolloProvider>
     </ConfigProvider>
   )

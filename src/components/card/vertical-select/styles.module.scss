@@ -1,0 +1,31 @@
+.btn-container {
+  display: flex;
+  flex-direction: column;
+  flex-wrap: wrap;
+  gap: 5px;
+  justify-content: center;
+}
+
+.title {
+  display: flex;
+  justify-items: center;
+  gap: 10px;
+  font-weight: 600;
+  margin-bottom: 20px;
+}
+
+.checked, .checked:focus {
+  background-color: white;
+}
+
+.purple {
+  background-color: rgb(235, 239, 255);
+}
+
+.pink {
+  background-color: rgb(255, 237, 246)
+}
+
+.blue {
+  background-color: rgb(225, 240, 255)
+}

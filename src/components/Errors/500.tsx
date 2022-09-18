@@ -1,6 +1,5 @@
 import { Button, Result } from 'antd'
 import Link from 'next/link'
-import { ROUTE } from 'src/constants/route'
 
 export const Page500 = () => {
   return (
@@ -10,7 +9,7 @@ export const Page500 = () => {
       subTitle="Sorry, something went wrong."
       extra={
         <Button type="primary">
-          <Link href={ROUTE.BASE.URL}>Back Home</Link>
+          <Link href={'/'}>Back Home</Link>
         </Button>
       }
     />

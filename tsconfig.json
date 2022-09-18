@@ -25,7 +25,8 @@
     "**/*.ts",
     "**/*.tsx",
     "src/utils/dbConnect.ts",
-    "src/mock/assets-list-data.tx"
+    "src/mock/assets-list-data.tx",
+    "src/serviceWorker.js"
   ],
   "exclude": ["node_modules"]
 }

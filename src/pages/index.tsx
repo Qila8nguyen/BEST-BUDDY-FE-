@@ -1,13 +1,14 @@
-import { Button, Spin, Tabs, Typography } from 'antd'
-import React from 'react'
-import { PLATFORMNAME } from 'src/constants/typeEnum'
-
-const { TabPane } = Tabs
-const { Title } = Typography
+import { Skeleton } from 'antd'
+import { useRouter } from 'next/router'
+import React, { useEffect } from 'react'
 
 const Homepage = () => {
-  return <div>{'Hello'}</div>
-  // )
+  const router = useRouter()
+
+  useEffect(() => {
+    router.push('/openup-question')
+  }, [])
+  return <Skeleton />
 }
 
 export default Homepage
